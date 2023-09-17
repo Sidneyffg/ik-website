@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./chess-js/pieces.js"></script>
+    <script src="./chess-js/board.js" defer></script>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="" id="background-img">
+    <div id="scroll-down" onclick="scrollDown()">
+        <h3>Scroll down!</h4>
+        <img src="/assest/expand.svg" alt="">
+    </div>
+    <main>
+        <nav id="header">
+            <p onclick="scrollToElem(0)">SINGAPORE</p>
+            <p onclick="scrollToElem(1)">SPORT</p>
+            <p onclick="scrollToElem(2)">SCOUTING</p>
+            <p onclick="scrollToElem(3)">PROJECTEN</p>
+        </nav>
+        <div id="sections">
+            <section id="section-singapore">
+                <div class="section-left">
+                    <h1>SINGAPORE</h1>
+                    <p>Na groep 5 ben ik met mijn gezin naar Singapore verhuisd. Singapore ligt in Azië, zo'n 10,000 km van Nederland vandaan. In Singapore zat ik voor 2,5 jaar op een Nederlandse basisschool waarna we weer terug zijn gegaan naar Nederland.</p>
+                </div>
+                <div class="section-right">
+                    <div>
+                        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="">
+                    </div>
+                    <div>
+                        <img class="reversed-triangle" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="">
+                        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+            <section id="section-sport"  style="background-color: rgb(240, 240, 240);">
+                <div class="section-left">
+                    <div>
+                        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="">
+                        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="">
+                        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="">
+                    </div>
+                </div>
+                <div class="section-right">
+                    <h1>SPORT</h1>
+                    <p>Ik zit sinds ik 10 ben op tennis, verder ga ik 3 keer per week naar de sportschool. Ik hardloop en zit op de ergometer 3 keer per week.</p>
+                </div>
+            </section>
+            <section id="section-scouting" style="background-color: rgb(225, 225, 225);">
+                <div class="section-left">
+                    <h1>SCOUTING</h1>
+                    <p>Ik zit sinds ik 5 jaar oud was al op scouting Ik zit sinds ik 5 jaar oud was al op scouting</p>
+                </div>
+                <div class="section-right">
+                    <div>
+                        <img src="/assest/scouting1.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="/assest/scouting2.jpg" alt="">
+                        <img src="/assest/scouting3.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="/assest/scouting4.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+            <section id="section-programmeren" style="background-color: rgb(210, 210, 210);">
+                <div class="section-left">
+                    <div id="board">
+                        <div class="row">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="row">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="row">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="row">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="row">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="row">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="row">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="row">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-right">
+                    <h1>PROJECTEN</h1>
+                    <p>Ik zit sinds ik 5 jaar oud was al op scouting Ik zit sinds ik 5 jaar oud was al op scouting</p>
+                </div>
+            </section>
+            <section id="section-info" style="background-color: rgb(195, 195, 195);"></section>
+        </div>
+    </main>
+</body>
+</html>

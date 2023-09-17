@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+  font-family: "roboto";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body,
+html {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+#background-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#scroll-down {
+  position: fixed;
+  width: 110px;
+  height: 50px;
+  bottom: 0;
+  left: calc(50% - 52px);
+  color: white;
+  cursor: pointer;
+  z-index: -1;
+}
+
+#scroll-down > img {
+  display: block;
+  margin-inline: auto;
+  width: 35px;
+  margin-top: -7px;
+  transition: all 0.2s ease-in-out;
+}
+
+#scroll-down:hover img {
+  margin-top: -2px;
+}
+
+main {
+  margin-top: 100vh;
+  background-color: white;
+}
+
+nav {
+  height: 50px;
+  background-color: white;
+  border-bottom: 1px black solid;
+  box-shadow: 0px 3px 5px grey;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 15px;
+  display: flex;
+  gap: 25px;
+}
+
+nav > p {
+  cursor: pointer;
+}
+
+section {
+  width: 100%;
+  height: 400px;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+section > div {
+  width: calc(50% - 5px);
+  height: 100%;
+}
+
+.section-right {
+  text-align: right;
+}
+
+.section-right > p {
+  margin-left: auto;
+}
+
+section h1 {
+  font-size: 3rem;
+  font-family: "Montserrat";
+}
+
+section p {
+  margin-top: 30px;
+  max-width: 450px;
+  line-height: 25px;
+}
+
+#section-singapore > .section-right,
+#section-sport > .section-left,
+#section-scouting > .section-right,
+#section-programmeren > .section-left {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#section-singapore > .section-right > div:nth-child(3) {
+  margin-top: -174px;
+}
+
+#section-singapore img:not(.reversed-triangle) {
+  height: 174px;
+  width: calc(174px * (100 / 80));
+  object-fit: cover;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.reversed-triangle {
+  height: 174px;
+  width: calc(174px * (100 / 80));
+  object-fit: cover;
+  clip-path: polygon(50% 100%, 0% 0, 100% 0);
+}
+
+#section-sport img {
+  width: 200px;
+  height: 174px;
+  object-fit: cover;
+}
+
+#section-scouting
+  > .section-right
+  > div:not(#section-scouting > .section-right > div:first-child) {
+  margin-top: calc(174px / -2);
+}
+
+#section-scouting img {
+  height: 174px;
+  width: calc(174px * (100 / 80));
+  object-fit: cover;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/*------- chess board -------*/
+
+#board {
+  width: 360px;
+  height: 360px;
+  margin-inline: auto;
+}
+
+.big-board {
+  width: 500px;
+  height: 500px;
+  box-shadow: 0 0 10px gray;
+}
+
+.row {
+  display: flex;
+  width: fit-content;
+}
+
+.row > div {
+  width: 45px;
+  height: 45px;
+  background-color: rgb(119, 149, 86);
+  position: relative;
+}
+
+.big-board > row > div {
+  width: 62.5;
+  height: 62.5;
+}
+
+.row > div.selected {
+  background-color: rgba(187, 203, 43, 1);
+}
+
+.row:nth-child(even) > div:nth-child(even) {
+  background-color: rgb(235, 236, 208);
+}
+
+.row:nth-child(odd) > div:nth-child(odd) {
+  background-color: rgb(235, 236, 208);
+}
+
+.row:nth-child(even) > div.selected:nth-child(even) {
+  background-color: rgb(247, 247, 105);
+}
+
+.row:nth-child(odd) > div.selected:nth-child(odd) {
+  background-color: rgb(247, 247, 105);
+}
+
+.row > div > img {
+  width: 45px;
+  height: 45px;
+  -webkit-user-drag: none;
+}
+
+.dot::after {
+  content: "";
+  position: absolute;
+  width: 13.5px;
+  aspect-ratio: 1/1;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+/*----------------------------------*/
+/*---------- programmeren ----------*/
+/*----------------------------------*/
+
+body#programmeren-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40px 1fr;
+  grid-template-areas:
+    "nav nav"
+    "main projects";
+  min-height: 100vh;
+}
+
+nav {
+  grid-area: nav;
+}
+
+#programmeren-main {
+  grid-area: main;
+  padding: 20px;
+}
+
+#programmeren-projects {
+  grid-area: projects;
+  padding: 20px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.projects-container > div {
+  margin: 5px;
+}
+
+.projects-container p {
+  text-align: center;
+}
+
+.projects-container img {
+  cursor: pointer;
+  width: 250px;
+  border-radius: 5px;
+}
