@@ -109,7 +109,8 @@ section p {
 #section-singapore > .section-right,
 #section-sport > .section-left,
 #section-scouting > .section-right,
-#section-programmeren > .section-left {
+#section-family > .section-left,
+#section-programmeren > .section-right {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -221,6 +222,24 @@ section p {
   border-radius: 50%;
 }
 
+#section-family img {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  height: 174px;
+  margin: 0;
+  width: 250px;
+}
+
+#section-family > .section-left > div > img:nth-child(1) {
+  margin-right: -61px;
+}
+
+#section-family > .section-left > div:nth-child(1) {
+  margin-left: 65px;
+}
+#section-family > .section-left > div:nth-child(2) {
+  margin-left: -65px;
+}
+
 /*----------------------------------*/
 /*---------- programmeren ----------*/
 /*----------------------------------*/
@@ -228,10 +247,11 @@ section p {
 body#programmeren-body {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 40px 1fr;
+  grid-template-rows: 40px 450px 1fr;
   grid-template-areas:
     "nav nav"
-    "main projects";
+    "main chess-board"
+    "projects projects";
   min-height: 100vh;
 }
 
@@ -244,27 +264,104 @@ nav {
   padding: 20px;
 }
 
-#programmeren-projects {
-  grid-area: projects;
+#programmeren-main > h1 {
+  margin-bottom: 10px;
+}
+
+#programmeren-main > ul {
+  margin-top: 15px;
+}
+
+#programmeren-schaakbord {
+  grid-area: chess-board;
   padding: 20px;
-}
-
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.projects-container > div {
-  margin: 5px;
-}
-
-.projects-container p {
   text-align: center;
 }
 
-.projects-container img {
-  cursor: pointer;
-  width: 250px;
-  border-radius: 5px;
+#programmeren-schaakbord > h2 {
+  margin-bottom: 10px;
+}
+
+#programmeren-projects {
+  grid-area: projects;
+  display: flex;
+  overflow: hidden;
+  padding: 2rem 0rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+#programmeren-projects > h1 {
+  font-size: 3rem;
+}
+
+.programmeren-project {
+  width: min(calc(100vw - 2rem), 72rem);
+  display: flex;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.programmeren-project img {
+  max-width: 32rem;
+  min-width: 32rem;
+  max-height: 18rem;
+  min-height: 18rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.programmeren-project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/*----------------------------------*/
+/*------------ scouting ------------*/
+/*----------------------------------*/
+
+#scouting-title {
+  margin: 20px 0 0 20px;
+}
+
+#scouting-images {
+  padding: 20px;
+}
+
+#scouting-images > img {
+  height: 250px;
+}
+
+/*---------------------------------*/
+/*------------- sport -------------*/
+/*---------------------------------*/
+
+th,
+td {
+  outline: 1px solid black;
+}
+
+/*----------------------------------*/
+/*------------- family -------------*/
+/*----------------------------------*/
+
+#family-container > div {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.family-member {
+  width: 100%;
+  height: 250px;
+  background-color: lightgray;
 }
