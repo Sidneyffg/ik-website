@@ -4,7 +4,9 @@ let startProductBarPos = -1;
 
 const sections = [
   document.getElementById("section-singapore"),
+  document.getElementById("section-sport"),
   document.getElementById("section-scouting"),
+  document.getElementById("section-family"),
   document.getElementById("section-programmeren"),
 ];
 
