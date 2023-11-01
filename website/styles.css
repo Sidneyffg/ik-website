@@ -467,16 +467,38 @@ nav {
 .timeline-container>img {
   opacity: 0%;
   position: absolute;
-  width: 200px;
-  max-height: 200px;
-  left: -200px;
-  top: 10px;
+  max-width: 300px;
+  max-height: 300px;
+  bottom: 100%;
   border-radius: 5px;
+  object-fit: cover;
   transition: all .15s ease-in-out;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.timeline-container>img.show-img-bottom {
+  top: 100%;
+}
+
+.timeline-left>img {
+  left: 40px;
+}
+
+.timeline-right>img {
+  right: 40px;
+}
+
+.timeline-left>img[opacity=0]{
+  display: none;
 }
 
 .timeline-container:hover>img {
   opacity: 100%;
+}
+
+.timeline-container>img:hover{
+  opacity: 0% !important;
 }
 
 /* The circles on the timeline */
