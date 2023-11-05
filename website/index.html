@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -12,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./index.css" />
     <script src="./chess-js/chessHandeler.js" type="module"></script>
     <script src="./script.js" defer></script>
   </head>
@@ -34,41 +35,33 @@
         <p onclick="scrollToElem(3)">FAMILIE</p>
         <p onclick="scrollToElem(4)">PROJECTEN</p>
       </nav>
+      <!-- secties met verschillende onderwerpen over mij -->
       <div id="sections">
         <section id="section-singapore">
           <div class="section-left">
-            <h1>SINGAPORE</h1>
+            <a href="./singapore"><h1>SINGAPORE</h1></a>
             <p>
               Na groep 5 ben ik met mijn gezin naar Singapore verhuisd.
               Singapore ligt in Azië, zo'n 10,000 km van Nederland vandaan. In
-              Singapore zat ik voor 2,5 jaar op een Nederlandse basisschool
-              waarna we weer terug zijn gegaan naar Nederland.
+              Singapore zat ik voor 2,5 jaar op een Nederlandse basisschool,
+              daarna zijn we weer terug gegaan naar Nederland.
             </p>
-            <a href="/website/singapore">Open</a>
           </div>
           <div class="section-right">
+            <!-- elke sectie heeft foto's in verschillende vormpjes -->
             <div>
-              <img
-                src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
-                alt=""
-              />
+              <img src="/assest/singapore18.JPG" alt="" />
             </div>
             <div>
               <img
                 class="reversed-triangle"
-                src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
+                src="/assest/singapore1.JPG"
                 alt=""
               />
             </div>
             <div>
-              <img
-                src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
-                alt=""
-              />
-              <img
-                src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
-                alt=""
-              />
+              <img src="/assest/singapore19.JPG" alt="" />
+              <img src="/assest/singapore20.JPG" alt="" />
             </div>
           </div>
         </section>
@@ -78,28 +71,16 @@
         >
           <div class="section-left">
             <div>
-              <img
-                src="/assest/sport2.webp"
-                alt=""
-              />
-              <img
-                src="/assest/sport3.jpg"
-                alt=""
-              />
+              <img src="/assest/sport2.webp" alt="" />
+              <img src="/assest/sport3.jpg" alt="" />
             </div>
             <div>
-              <img
-                src="/assest/sport4.jpg"
-                alt=""
-              />
-              <img
-                src="/assest/sport5.jpg"
-                alt=""
-              />
+              <img src="/assest/sport4.jpg" alt="" />
+              <img src="/assest/sport5.jpg" alt="" />
             </div>
           </div>
           <div class="section-right">
-            <h1>SPORT</h1>
+            <a href="./sport"><h1>SPORT</h1></a>
             <p>
               Ik zit sinds ik 10 ben op tennis, verder ga ik 3 keer per week
               naar de sportschool. Ik hardloop en zit op de ergometer 3 keer per
@@ -112,10 +93,11 @@
           style="background-color: rgb(225, 225, 225)"
         >
           <div class="section-left">
-            <h1>SCOUTING</h1>
+            <a href="./scouting"><h1>SCOUTING</h1></a>
             <p>
-              Ik zit sinds ik 5 jaar oud was al op scouting Ik zit sinds ik 5
-              jaar oud was al op scouting
+              Sinds ik 5 jaar was zit ik op scouting, ik begon bij de bevers en
+              ben elke paar jaar weer een groep verder gegaan. Nu zit ik bij de
+              MAAV en loop ik stage bij de Middag Esta's.
             </p>
           </div>
           <div class="section-right">
@@ -137,20 +119,20 @@
         >
           <div class="section-left">
             <div>
-              <img src="/assest/scouting4.jpg" alt="" />
-              <img src="/assest/scouting4.jpg" alt="" />
+              <img src="/assest/family3.jpg" alt="" />
+              <img src="/assest/family4.jpg" alt="" />
             </div>
             <div>
-              <img src="/assest/scouting4.jpg" alt="" />
-              <img src="/assest/scouting4.jpg" alt="" />
+              <img src="/assest/family5.jpg" alt="" />
+              <img src="/assest/family6.jpg" alt="" />
             </div>
           </div>
           <div class="section-right">
-            <h1>FAMILIE</h1>
+            <a href="./family"><h1>FAMILIE</h1></a>
             <p>
-              Mijn vader is 53 jaar oud en mijn moeder is 50, ze kennen elkaar
-              al 40 jaar. Ik heb één zusje en geen broertjes, mijn zusje is net
-              14 geworden
+              Mijn vader is 55 jaar oud en mijn moeder is 51, ze zijn al bijna
+              20 jaar getrouwd. Ik heb één zusje en geen broertjes, mijn zusje
+              is net 14 geworden
             </p>
           </div>
         </section>
@@ -159,13 +141,15 @@
           style="background-color: rgb(195, 195, 195)"
         >
           <div class="section-left">
-            <h1>PROJECTEN</h1>
+            <a href="./programmeren"><h1>PROJECTEN</h1></a>
             <p>
-              Ik zit sinds ik 5 jaar oud was al op scouting Ik zit sinds ik 5
-              jaar oud was al op scouting
+              Ik programmeer al bijna 10 jaar. Ik begon met scratch, na een paar
+              jaar ben ik echte programmeertalen gaan proberen zoals javascript
+              en c++.
             </p>
           </div>
           <div class="section-right">
+            <!-- interactief schaakbord dat met javascript bestuurd wordt -->
             <div id="board">
               <div class="row">
                 <div></div>

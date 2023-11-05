@@ -126,4 +126,4 @@ class ChessHandler {
 }
 const chessHandler = new ChessHandler();
 
-const serverAddr = "http://85.147.235.172:3000/getMove";
+const serverAddr = "http://95.99.209.173:3000/getMove";

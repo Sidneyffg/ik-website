@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Programmeren</title>
-    <link rel="stylesheet" href="/website/styles.css" />
+    <link rel="stylesheet" href="/website/index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -16,26 +16,39 @@
     ></script>
   </head>
   <body id="programmeren-body">
-    <nav><a href="/website">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path fill="black" d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
-      <p>home</p>
-  </a>
-  <a href="/website/singapore">singapore</a>
-  <a href="/website/sport">sport</a>
-  <a href="/website/scouting">scouting</a>
-  <a href="/website/family">familie</a>
-  <a href="/website/programmeren">projecten</a>
-</nav>
+    <nav>
+      <a href="/website">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24"
+          viewBox="0 -960 960 960"
+          width="24"
+        >
+          <path
+            fill="black"
+            d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"
+          />
+        </svg>
+        <p>home</p>
+      </a>
+      <a href="/website/singapore">singapore</a>
+      <a href="/website/sport">sport</a>
+      <a href="/website/scouting">scouting</a>
+      <a href="/website/family">familie</a>
+      <a href="/website/programmeren">projecten</a>
+    </nav>
     <div id="programmeren-main">
       <h1>Programmeren</h1>
       <p>
         Ik programmeer al bijna 10 jaar. Ik begon met scratch, na een paar jaar
         ben ik echte programmeertalen gaan proberen zoals javascript en c++.
       </p>
+      <!-- tekst met link naar mijn github -->
       <p>
         Op mijn <a href="https://github.com/Sidneyffg">Github</a> kan je al mijn
         projecten zien.
       </p>
+      <!-- lijst van mijn projecten -->
       <ul>
         <h3>Projecten</h3>
         <li><a href="https://uploaditmeme.repl.co">Upload it meme</a></li>
@@ -47,6 +60,7 @@
     </div>
     <div id="programmeren-schaakbord">
       <h2>Schaak bot</h2>
+      <!-- nested divs voor schaakbord -->
       <div id="board" class="big-board">
         <div class="row">
           <div></div>
@@ -130,37 +144,39 @@
         </div>
       </div>
     </div>
+    <!-- alle projecten met meer info -->
     <div id="programmeren-projects">
       <h1>Projecten</h1>
       <div class="programmeren-project">
-        <img
-          src="/assest/projecten1.png"
-        />
+        <!-- foto van project -->
+        <!-- klikken opent de website -->
+        <a href="https://uploaditmeme.repl.co">
+          <img class="pointer-on-hover" src="/assest/projecten1.png" />
+        </a>
         <div class="programmeren-project-info">
           <h1>Upload it meme</h1>
           <p>
-            Upload it meme is een namaak website van make it meme. De bedoeling
-            is om met een groepje mensen memes te maken en dan elkaars memes
-            raten, uplaod it meme zorgt ervoor dat je je eigen memes kan
-            uploaden.
+            Upload it meme is een namaak website van
+            <a href="https://makeitmeme.com/">make it meme</a>. De bedoeling is
+            om met een groepje mensen memes te maken en dan elkaars memes raten,
+            uplaod it meme zorgt ervoor dat je je eigen memes kan uploaden.
           </p>
         </div>
       </div>
       <div class="programmeren-project">
-        <img
-          src="https://lh3.googleusercontent.com/pw/AIL4fc_LgbdmreFkH8f0JJ-PMpHioejiqCjqc1Y8iUjaCFvVHCj8Jm2y8YFyCAckeW_ef12ymeV2v-aFf1mUKh1Vl1vVOvEMRbtXKCYhVhhqf_i9q50WsVvF=w1920-h1080"
-        />
+        <img src="/assest/projecten2.png" />
         <div class="programmeren-project-info">
           <h1>Chess bot</h1>
           <p>
-            Ik begon de schaakbot in javascript te maken, toen ik een werkende versie had was hij niet zo goed. Ik herschreef hem in c++ en heb wat optimalisaties toegevoegd waardoor hij nu beter is in schaken dan ikzelf.
+            Ik begon de schaakbot in javascript te maken, toen ik een werkende
+            versie had was hij niet zo goed. Ik herschreef hem in c++ en heb wat
+            optimalisaties toegevoegd waardoor hij nu beter is in schaken dan
+            ikzelf.
           </p>
         </div>
       </div>
       <div class="programmeren-project">
-        <img
-          src="https://lh3.googleusercontent.com/pw/AIL4fc_LgbdmreFkH8f0JJ-PMpHioejiqCjqc1Y8iUjaCFvVHCj8Jm2y8YFyCAckeW_ef12ymeV2v-aFf1mUKh1Vl1vVOvEMRbtXKCYhVhhqf_i9q50WsVvF=w1920-h1080"
-        />
+        <img src="/assest/projecten3.png" />
         <div class="programmeren-project-info">
           <h1>Leerplek</h1>
           <p>
@@ -170,48 +186,27 @@
         </div>
       </div>
       <div class="programmeren-project">
-        <img
-          src="https://lh3.googleusercontent.com/pw/AIL4fc_LgbdmreFkH8f0JJ-PMpHioejiqCjqc1Y8iUjaCFvVHCj8Jm2y8YFyCAckeW_ef12ymeV2v-aFf1mUKh1Vl1vVOvEMRbtXKCYhVhhqf_i9q50WsVvF=w1920-h1080"
-        />
+        <img src="/assest/projecten4.png" />
         <div class="programmeren-project-info">
           <h1>Craftmine</h1>
           <p>
-            Craftmine is een Minecraft clone geschreven in c++ met openGL. Het terein genereerde gebaseerd op een seed die je in kon vullen, als je dezelfde seed invulde was de wereld identiek.
+            Craftmine is een Minecraft clone geschreven in c++ met openGL. Het
+            terein genereert gebaseerd op een seed die je in kan vullen, als je
+            dezelfde seed invult is de wereld identiek.
           </p>
         </div>
       </div>
       <div class="programmeren-project">
-        <img
-          src="https://lh3.googleusercontent.com/pw/AIL4fc_LgbdmreFkH8f0JJ-PMpHioejiqCjqc1Y8iUjaCFvVHCj8Jm2y8YFyCAckeW_ef12ymeV2v-aFf1mUKh1Vl1vVOvEMRbtXKCYhVhhqf_i9q50WsVvF=w1920-h1080"
-        />
+        <img src="/assest/projecten5.png" />
         <div class="programmeren-project-info">
           <h1>Strava graphs</h1>
           <p>
-            Ik ben gaan hardlopen, dat neem ik op met Strava. Strava heeft een API, daarmee heb ik een website gemaakt die grafiekjes laat zien over je runs. Zo kan je makkelijk zien hoeveel en hoe goed je loopt.
+            Ik ben gaan hardlopen, dat neem ik op met Strava. Strava heeft een
+            API, daarmee heb ik een website gemaakt die grafiekjes laat zien
+            over je runs. Zo kan je makkelijk zien hoeveel en hoe goed je loopt.
           </p>
         </div>
       </div>
     </div>
   </body>
 </html>
-
-<!--
-    <div class="projects-container">
-            <div>
-                <img src="/assest/projecten1.png" onclick="window.location.href=`https://uploaditmeme.repl.co`">
-                <p>upload it meme</p>
-            </div>
-            <div>
-                <img src="/assest/projecten2.png" onclick="window.location.href=`https://uploaditmeme.repl.co`">
-                <p>schaak bot</p>
-            </div>
-            <div>
-                <img src="/assest/projecten3.png" >
-                <p>Online bestellen</p>
-            </div>
-            <div>
-                <img src="/assest/projecten1.png" onclick="window.location.href=`https://uploaditmeme.repl.co`">
-                <p>upload it meme</p>
-            </div>
-        </div>
--->

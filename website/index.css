@@ -1,0 +1,614 @@
+/* alle elements moeten precies de width krijgen die ik aangeef */
+/* alle text moet het font roboto hebben */
+* {
+  box-sizing: border-box;
+  font-family: "roboto";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* links moeten er als normale text uitzien */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* algemene css voor achtergrond */
+body,
+html {
+  margin: 0;
+  scroll-behavior: smooth;
+  background: linear-gradient(white, rgb(207, 207, 207));
+  min-height: 100vh;
+}
+
+/* achtergrond foto op home scherm */
+#background-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* knop om automatisch naar beneden te scrollen */
+#scroll-down {
+  position: fixed;
+  width: 110px;
+  height: 50px;
+  bottom: 0;
+  left: calc(50% - 52px);
+  color: white;
+  cursor: pointer;
+  z-index: -1;
+}
+
+#scroll-down > img {
+  display: block;
+  margin-inline: auto;
+  width: 35px;
+  margin-top: -7px;
+  transition: all 0.2s ease-in-out;
+}
+
+#scroll-down:hover img {
+  margin-top: -2px;
+}
+
+/* main moet niet zichtbaar zijn op page load zodat je achtergrond kan zien */
+main {
+  margin-top: 100vh;
+  background-color: white;
+}
+
+/* algemene navbar */
+nav {
+  height: 50px;
+  background-color: white;
+  border-bottom: 1px black solid;
+  box-shadow: 0px 3px 5px grey;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 15px;
+  display: flex;
+  gap: 25px;
+}
+
+nav > p {
+  cursor: pointer;
+}
+
+nav > a {
+  display: flex;
+  align-items: center;
+}
+
+nav > a > p {
+  margin-left: -5px;
+}
+
+nav > a:nth-child(1) {
+  margin-right: auto;
+}
+
+/* alle secties op de home pagina */
+section {
+  width: 100%;
+  height: 400px;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+section > div {
+  width: calc(50% - 5px);
+  height: 100%;
+}
+
+.section-right {
+  text-align: right;
+}
+
+.section-right > p {
+  margin-left: auto;
+}
+
+section h1 {
+  font-size: 3rem;
+  font-family: "Montserrat";
+}
+
+section p {
+  margin-top: 30px;
+  max-width: 450px;
+  line-height: 25px;
+}
+
+section a {
+  border: 2px black;
+}
+
+#section-singapore > .section-right,
+#section-sport > .section-left,
+#section-scouting > .section-right,
+#section-family > .section-left,
+#section-programmeren > .section-right {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#section-singapore > .section-right > div:nth-child(3) {
+  margin-top: -174px;
+}
+
+/* driehoek vorm voor fotos */
+#section-singapore img:not(.reversed-triangle) {
+  height: 174px;
+  width: calc(174px * (100 / 80));
+  object-fit: cover;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* omgekeerde driehoek */
+.reversed-triangle {
+  height: 174px;
+  width: calc(174px * (100 / 80));
+  object-fit: cover;
+  clip-path: polygon(50% 100%, 0% 0, 100% 0);
+}
+
+#section-sport img {
+  width: 200px;
+  height: 174px;
+  object-fit: cover;
+}
+
+/* zorgt voor goede positie van de fotos */
+#section-scouting
+  > .section-right
+  > div:not(#section-scouting > .section-right > div:first-child) {
+  margin-top: calc(174px / -2);
+}
+
+#section-scouting img {
+  height: 174px;
+  width: calc(174px * (100 / 80));
+  object-fit: cover;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+#section-family img {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  height: 174px;
+  margin: 0;
+  width: 250px;
+  object-fit: cover;
+}
+
+#section-family > .section-left > div > img:nth-child(1) {
+  margin-right: -61px;
+}
+
+#section-family > .section-left > div:nth-child(1) {
+  margin-left: 65px;
+}
+#section-family > .section-left > div:nth-child(2) {
+  margin-left: -65px;
+}
+
+/*------- chess board -------*/
+
+#board {
+  width: 360px;
+  height: 360px;
+  margin-inline: auto;
+}
+
+.big-board {
+  width: 500px;
+  height: 500px;
+  box-shadow: 0 0 10px gray;
+}
+
+.row {
+  display: flex;
+  width: fit-content;
+}
+
+.row > div {
+  width: 45px;
+  height: 45px;
+  background-color: rgb(119, 149, 86);
+  position: relative;
+}
+
+.big-board > row > div {
+  width: 62.5px;
+  height: 62.5px;
+}
+
+/* kleuren van de schaakbord vierkantjes */
+.row > div.selected {
+  background-color: rgba(187, 203, 43, 1);
+}
+
+.row:nth-child(even) > div:nth-child(even) {
+  background-color: rgb(235, 236, 208);
+}
+
+.row:nth-child(odd) > div:nth-child(odd) {
+  background-color: rgb(235, 236, 208);
+}
+
+.row:nth-child(even) > div.selected:nth-child(even) {
+  background-color: rgb(247, 247, 105);
+}
+
+.row:nth-child(odd) > div.selected:nth-child(odd) {
+  background-color: rgb(247, 247, 105);
+}
+
+.row > div > img {
+  width: 45px;
+  height: 45px;
+  -webkit-user-drag: none;
+}
+
+/* rondje op geselecteerd vierkantje */
+.dot::after {
+  content: "";
+  position: absolute;
+  width: 13.5px;
+  aspect-ratio: 1/1;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+/*----------------------------------*/
+/*---------- programmeren ----------*/
+/*----------------------------------*/
+
+body#programmeren-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40px 450px 1fr;
+  grid-template-areas:
+    "nav nav"
+    "main chess-board"
+    "projects projects";
+  min-height: 100vh;
+}
+
+nav {
+  grid-area: nav;
+}
+
+#programmeren-main {
+  grid-area: main;
+  padding: 20px;
+}
+
+/* link heeft lijn eronder zodat het duidelijk is dat je er op kan klikken */
+#programmeren-main a {
+  text-decoration: underline;
+}
+
+#programmeren-main > h1 {
+  margin-bottom: 10px;
+}
+
+#programmeren-main > ul {
+  margin-top: 15px;
+}
+
+#programmeren-schaakbord {
+  grid-area: chess-board;
+  padding: 20px;
+  text-align: center;
+}
+
+#programmeren-schaakbord > h2 {
+  margin-bottom: 10px;
+}
+
+/* projecten met meer info en foto */
+#programmeren-projects {
+  grid-area: projects;
+  display: flex;
+  overflow: hidden;
+  padding: 2rem 0rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+#programmeren-projects a {
+  text-decoration: underline;
+}
+
+#programmeren-projects > h1 {
+  font-size: 3rem;
+}
+
+.programmeren-project {
+  width: min(calc(100vw - 2rem), 72rem);
+  display: flex;
+  overflow: hidden;
+  padding: 30px;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.programmeren-project img {
+  max-width: 32rem;
+  min-width: 32rem;
+  max-height: 18rem;
+  min-height: 18rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.pointer-on-hover:hover {
+  cursor: pointer;
+}
+
+.programmeren-project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/*----------------------------------*/
+/*------------ scouting ------------*/
+/*----------------------------------*/
+
+#scouting-title {
+  margin: 20px 0 0 20px;
+}
+
+#scouting-images {
+  padding: 20px;
+}
+
+#scouting-images > img {
+  height: 250px;
+}
+
+/*---------------------------------*/
+/*------------- sport -------------*/
+/*---------------------------------*/
+
+#sport-page {
+  display: flex;
+}
+
+#sport-page > div {
+  width: 50%;
+  padding: 20px;
+}
+
+/* zodat de tabel mooie lijnen om zich heeft */
+table,
+th,
+td {
+  border: 1px solid;
+  padding: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: white;
+}
+
+td,
+th {
+  width: 150px;
+}
+
+.sport-item {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.sport-item > img {
+  min-width: 300px;
+  max-width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/*----------------------------------*/
+/*------------- family -------------*/
+/*----------------------------------*/
+
+#family-container {
+  padding: 10px;
+}
+
+#family-container > div {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* familielid met achtergrond info en plaatje */
+.family-member {
+  width: 100%;
+  height: 250px;
+  background-color: rgb(224, 224, 224);
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  gap: 20px;
+}
+
+.family-member > img {
+  height: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* familiefoto met box-shadow inset zodat er een fade is */
+#family-picture {
+  background-image: url("/assest/family7.jpg");
+  background-size: cover;
+  width: calc(100% - 50px);
+  aspect-ratio: 1/0.65;
+  margin: 20px 25px;
+  box-shadow: 0 0 20px white inset;
+  border-radius: 5px;
+}
+
+/*-------------------------------------*/
+/*------------- singapore -------------*/
+/*-------------------------------------*/
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline-container {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+}
+
+/* foto bij tijdlijn die verschijnt als je hovert */
+.timeline-container > img,
+.timeline-container > video {
+  opacity: 0%;
+  position: absolute;
+  max-width: 300px;
+  max-height: 300px;
+  bottom: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  transition: all 0.15s ease-in-out;
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* de bovenste paar moeten de foto onderaan laten zien */
+.timeline-container > img.show-img-bottom {
+  top: 100%;
+}
+
+.timeline-left > img,
+.timeline-left > video {
+  left: 40px;
+}
+
+.timeline-right > img {
+  right: 40px;
+}
+
+/* opacity ipv display: none; zodat je animatie hebt */
+.timeline-container:hover > img,
+.timeline-container:hover > video {
+  opacity: 100%;
+}
+
+.timeline-container > img:hover,
+.timeline-container > video:hover {
+  opacity: 0% !important;
+}
+
+.timeline-container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #ff9f55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-left {
+  left: 0;
+}
+
+.timeline-right {
+  left: 50%;
+}
+
+/* tijdlijn item pijltje */
+.timeline-left::before {
+  content: "";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.timeline-right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.timeline-right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.timeline-content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}

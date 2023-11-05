@@ -2,6 +2,8 @@ const bar = document.getElementById("header"),
   scroll_down = document.getElementById("scroll-down");
 let startProductBarPos = -1;
 
+
+// all secties in een array
 const sections = [
   document.getElementById("section-singapore"),
   document.getElementById("section-sport"),
@@ -10,7 +12,8 @@ const sections = [
   document.getElementById("section-programmeren"),
 ];
 
-window.onscroll = function () {
+// zorgt ervoor dat de header zichtbaar blijft als je doorscrollt op de home pagina
+window.onscroll = () => {
   if (startProductBarPos < 0) startProductBarPos = findPosY(bar);
 
   if (pageYOffset > startProductBarPos) {
@@ -41,6 +44,7 @@ function scrollDown() {
   window.scrollTo(0, window.innerHeight);
 }
 
+// als in de nav op een 
 function scrollToElem(elemNum) {
   sections[elemNum].scrollIntoView({ block: "center" });
 }
